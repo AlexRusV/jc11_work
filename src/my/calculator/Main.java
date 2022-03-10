@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        while (true) {
+        int operationCount = 0;
+        while (operationCount < 10) {
             // Abstract level 1
             Arguments arguments = readArguments();
             doCalculation(arguments);
             checkExitOrContinue();
+            operationCount++;
         }
     }
 
@@ -30,9 +32,9 @@ public class Main {
 
     private static void doCalculation(Arguments args) {
         //Abstract level 2
-        BasicCalculator basicCalculator = new BasicCalculator();
-        final double result =
-                basicCalculator.calculate(args.num1, args.num2, args.operation.charAt(0));
+        BasicCalculator abcd = new BasicCalculator();
+        double result =
+                abcd.calculate(args.num1, args.num2, args.operation.charAt(0));
         System.out.println("Result of " + args.num1
                 + args.operation.charAt(0) + args.num2 + " is " + result);
     }
