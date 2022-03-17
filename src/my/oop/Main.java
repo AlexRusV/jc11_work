@@ -18,5 +18,15 @@ public class Main {
         Bicycle myBicycle = new Bicycle();
         myBicycle.move();
         myBicycle.stop();
+
+        /*Machine machine = new Bicycle();
+        machine.work();
+        Machine machine1 = new Car();
+        machine1.work();*/
+
+        Machine[] machines = {new Car(), new Bicycle()};
+        for (Machine m : machines) {
+            m.work();
+        }
     }
 }
